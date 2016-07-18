@@ -5,6 +5,11 @@ nmap <leader>pj :%!python -m json.tool<CR>
 set autochdir
 
 
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
 filetype plugin indent on
 autocmd FileType yaml setl indentkeys-=<:>
 autocmd FileType yaml setl tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
