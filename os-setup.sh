@@ -4,7 +4,7 @@ set -e -x
 apt-get -y update
 apt-get -y install vim-nox nano curl git wget unzip
 
-wget -qO- https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+wget -qO- https://storage.googleapis.com/golang/go1.7.3.linux-amd64.tar.gz | tar -C /usr/local -xzf -
 
 #Set up $GOPATH and add go executables to $PATH
 cat > /etc/profile.d/go_env.sh <<\EOF
